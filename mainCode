@@ -1,0 +1,56 @@
+import random
+
+attack = ['rock', 'paper', 'scissors']
+computer = []
+player = []
+
+print('*********************************************************************')
+      
+print('*********************** Justins RoShamBo rumble!*********************')
+      
+print('*********************************************************************')
+
+# Define the computers choice
+while len(computer) == 0:
+    random.shuffle(attack)
+    computer.append(attack.pop())
+
+# Define the players choice
+    print('What is your choice? Rock, Paper, or Scissors?')
+    p_choice = input()
+    player.append(p_choice)
+
+# Tie conditions
+if player == computer:
+    print('You tied!')
+    exit()
+    
+# If the player chooses rock
+if 'rock' in player and 'scissors' in computer:
+    print('Rock beats scissors, player wins!')
+    exit()
+    
+if 'rock' in player and 'paper' in computer:
+    print('Paper covers rock, player loses!')
+    exit()
+
+# if the player chooses paper.
+if 'paper' in player and 'rock' in computer:
+    print('Paper covers rock, player wins!')
+    exit()
+
+if 'paper' in player and 'scissors' in computer:
+    print('Scissors cuts paper, player loses!')
+    exit()
+
+# If the player chooses scissors
+if 'scissors' in player and 'paper' in computer:
+    print('Scissors cuts paper, player wins!')
+    exit()
+
+if 'scissors' in player and 'rock' in computer:
+    print('Rock destroys scissors, player loses!')
+    exit()
+
+
+
